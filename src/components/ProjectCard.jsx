@@ -58,7 +58,7 @@ export default function ProjectCard({ project, index }) {
             }}>{project.category}</span>
             {project.highlight && (
               <span style={{
-                background: "linear-gradient(135deg, #3B82F6, #8B5CF6)",
+                background: "linear-gradient(135deg, #93C5FD, #8B5CF6)",
                 padding: "6px 14px",
                 borderRadius: "20px",
                 fontSize: "11px",
@@ -86,7 +86,7 @@ export default function ProjectCard({ project, index }) {
               {project.features.map(f => (
                 <span key={f} style={{
                   fontSize: "11px",
-                  color: "#60A5FA",
+                  color: "#93C5FD",
                   background: "rgba(59,130,246,0.1)",
                   padding: "4px 10px",
                   borderRadius: "12px",

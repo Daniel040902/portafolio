@@ -13,8 +13,7 @@ import {
   contactInfo,
   socialLinks,
   statsData,
-  experienceData,
-  educationData,
+  trainingData,
 } from "../data/portfolioData";
 
 export default function Portfolio() {
@@ -186,12 +185,7 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <div className="hero-badge1">
-                <div className="hero-badge1-content">
-                  <div className="hero-badge1-dot" />
-                  <span className="hero-badge1-text">Open to work</span>
-                </div>
-              </div>
+          
 
               <div className="hero-badge2">
                 <span className="hero-badge2-text">⚛️ React • 🔷 Laravel</span>
@@ -284,70 +278,51 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ========== EXPERIENCIA SECTION ========== */}
-      <section id="experiencia" className="experience-section">
-        <div className="experience-container">
-          <AnimSection className="experience-header">
-            <div className="experience-badge">
-              EXPERIENCIA
+      {/* ========== FORMACIÓN Y TRAYECTORIA SECTION ========== */}
+      <section id="trayectoria" className="training-section">
+        <div className="training-container">
+          <AnimSection className="training-header">
+            <div className="training-badge">
+              FORMACIÓN
             </div>
-            <h2 className="experience-title">
-              Experiencia{" "}
+            <h2 className="training-title">
+              Oferta{" "}
               <span>
-                Profesional
+                Académica y Laboral
               </span>
             </h2>
           </AnimSection>
 
-          <div className="experience-grid">
-            {experienceData.map((exp, idx) => (
-              <AnimSection key={exp.role} delay={idx * 100}>
-                <div className="experience-card">
-                  <h3 className="experience-role">{exp.role}</h3>
-                  <div className="experience-period">{exp.period}</div>
-                  <div className="experience-tech">
-                    {exp.technologies.map(tech => (
-                      <span key={tech} className="experience-tech-tag">{tech}</span>
+          <div className="training-grid">
+            {trainingData.map((item, idx) => (
+              <AnimSection key={item.title} delay={idx * 100}>
+                <div className={`training-card training-card--${item.type}`}>
+                  <div className="training-card-icon">{item.icon}</div>
+                  <div className="training-card-header">
+                    <h3 className="training-card-title">{item.title}</h3>
+                    <span className="training-card-subtitle">{item.subtitle}</span>
+                    <span className="training-card-period">{item.period}</span>
+                  </div>
+                  <p className="training-card-desc">{item.description}</p>
+                  {item.highlights && (
+                    <div className="training-card-highlights">
+                      <h4 className="training-card-highlights-title">🔹 Funciones realizadas:</h4>
+                      <ul className="training-card-highlights-list">
+                        {item.highlights.map(h => (
+                          <li key={h} className="training-card-highlights-item">• {h}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="training-card-tech">
+                    {item.technologies.map(tech => (
+                      <span key={tech} className="training-card-tech-tag">{tech}</span>
                     ))}
                   </div>
-                  <p className="experience-desc">{exp.description}</p>
                 </div>
               </AnimSection>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ========== FORMACIÓN SECTION ========== */}
-      <section id="formacion" className="education-section">
-        <div className="education-container">
-          <AnimSection className="education-header">
-            <div className="education-badge">
-              FORMACIÓN
-            </div>
-            <h2 className="education-title">
-              Formación{" "}
-              <span>
-                Académica
-              </span>
-            </h2>
-          </AnimSection>
-
-          <AnimSection delay={100}>
-            <div className="education-card">
-              <div className="education-meta">
-                <span className="education-degree">{educationData.degree}</span>
-                <span className="education-institution">{educationData.institution}</span>
-                <span className="education-period">{educationData.period}</span>
-              </div>
-              <p className="education-desc">{educationData.description}</p>
-              <div className="education-tech">
-                {educationData.technologies.map(tech => (
-                  <span key={tech} className="education-tech-tag">{tech}</span>
-                ))}
-              </div>
-            </div>
-          </AnimSection>
         </div>
       </section>
 
@@ -521,7 +496,7 @@ export default function Portfolio() {
                       outline: "none",
                       transition: "all 0.3s ease",
                     }}
-                    onFocus={e => e.target.style.borderColor = "#3B82F6"}
+                    onFocus={e => e.target.style.borderColor = "#93C5FD"}
                     onBlur={e => e.target.style.borderColor = "rgba(255,255,255,0.1)"}
                   />
                   <input
@@ -539,7 +514,7 @@ export default function Portfolio() {
                       outline: "none",
                       transition: "all 0.3s ease",
                     }}
-                    onFocus={e => e.target.style.borderColor = "#3B82F6"}
+                    onFocus={e => e.target.style.borderColor = "#93C5FD"}
                     onBlur={e => e.target.style.borderColor = "rgba(255,255,255,0.1)"}
                   />
                   <textarea
@@ -558,7 +533,7 @@ export default function Portfolio() {
                       resize: "vertical",
                       fontFamily: "inherit",
                     }}
-                    onFocus={e => e.target.style.borderColor = "#3B82F6"}
+                    onFocus={e => e.target.style.borderColor = "#93C5FD"}
                     onBlur={e => e.target.style.borderColor = "rgba(255,255,255,0.1)"}
                   />
                   <button

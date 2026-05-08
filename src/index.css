@@ -29,7 +29,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #3B82F6 #1F1F2E;
+  scrollbar-color: #93C5FD #1F1F2E;
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +41,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3B82F6;
+  background: #93C5FD;
   border-radius: 4px;
 }
 

@@ -58,7 +58,7 @@ export const services = [
     icon: "⚛️", 
     title: "Full Stack Web", 
     desc: "Aplicaciones web modernas y escalables con React, Laravel y bases de datos robustas.",
-    accent: "#3B82F6",
+    accent: "#93C5FD",
     features: ["Rendimiento optimizado", "SEO avanzado", "PWA ready", "Seguridad implementada"]
   },
   { 
@@ -95,7 +95,7 @@ export const navLinks = [
 export const categories = ["todos", "Full Stack", "Empresarial", "Android", "Frontend", "destacados"];
 
 export const contactInfo = [
-  { icon: "✉️", title: "Email", value: "valverde44255@gmail.com", color: "#3B82F6", action: "mailto:valverde44255@gmail.com" },
+  { icon: "✉️", title: "Email", value: "valverde44255@gmail.com", color: "#93C5FD", action: "mailto:valverde44255@gmail.com" },
   { icon: "💬", title: "WhatsApp", value: "+505 5824 9298", color: "#22C55E", action: "https://wa.me/50558249298" },
   { icon: "📍", title: "Ubicación", value: "León, Nicaragua", color: "#8B5CF6", action: null },
   { icon: "🐙", title: "GitHub", value: "/josuecastillo", color: "#fff", action: "https://github.com" },
@@ -114,25 +114,44 @@ export const statsData = [
   { label: "Clientes", value: 12, suffix: "+" },
 ];
 
-export const experienceData = [
+export const trainingData = [
   {
-    role: "Pasante en Yazaki Nicaragua",
-    period: "Septiembre 2025 - Enero 2026",
-    technologies: ["SAP", "Excel", "Soporte de sistemas", "Manejo de datos"],
-    description: "Aprendí procesos empresariales, uso de SAP, organización de información, soporte tecnológico y automatización básica de tareas."
+    icon: "🎓",
+    title: "Ingeniería en Sistemas de Información",
+    subtitle: "UNAN-León",
+    period: "2021 - 2025",
+    technologies: ["Laravel", "React", "MySQL", "PostgreSQL", "Git", "Docker", "Linux"],
+    description: "Carrera enfocada en el desarrollo de software, administración de bases de datos, redes y seguridad informática. Adquirí competencias en programación full stack con Laravel y React, diseño y administración de bases de datos MySQL y PostgreSQL, control de versiones con Git, virtualización con Docker y administración de sistemas Linux. También desarrollé habilidades en análisis de sistemas, ingeniería de software, metodologías ágiles y desarrollo de aplicaciones móviles.",
+    type: "academic"
   },
   {
-    role: "Pasante en UNAN-León",
+    icon: "🚀",
+    title: "Pasante de Desarrollo y Soporte Tecnológico",
+    subtitle: "Yazaki Nicaragua",
+    period: "Septiembre 2025 - Enero 2026",
+    technologies: ["SAP", "Microsoft Excel", "Soporte técnico", "Gestión de datos", "Automatización de procesos"],
+    description: "Participé en procesos tecnológicos y administrativos dentro del entorno empresarial, brindando soporte técnico y trabajando con herramientas de gestión empresarial como SAP. Durante la pasantía fortalecí habilidades en manejo de información, automatización de procesos y organización de datos corporativos en un entorno empresarial real.",
+    type: "professional"
+  },
+  {
+    icon: "💼",
+    title: "Full Stack Developer - Directorio de Vinculación",
+    subtitle: "UNAN-León",
     period: "Febrero 2026 - Mayo 2026",
-    technologies: ["React", "Laravel", "PostgreSQL", "APIs REST", "Tailwind CSS", "GitHub"],
-    description: "Trabajé en el proyecto Directorio de Vinculación, aprendiendo desarrollo full stack, manejo de base de datos, autenticación, reportes, importación de Excel y buenas prácticas de desarrollo."
+    technologies: ["React", "Laravel", "PostgreSQL", "APIs REST", "Tailwind CSS", "Git & GitHub", "Docker", "Linux"],
+    description: "Desarrollé completamente el sistema \"Directorio de Vinculación\", una plataforma web orientada a la gestión académica y laboral. Me encargué del desarrollo frontend y backend, diseño de base de datos, autenticación, APIs REST, importación masiva de Excel, reportes y despliegue del sistema en producción. Durante el proyecto aprendí procesos de despliegue y configuración de aplicaciones web utilizando Docker y entornos Linux, logrando implementar el sistema en producción y mantenerlo funcionando correctamente.",
+    highlights: [
+      "Desarrollo completo del frontend y backend",
+      "Diseño y gestión de base de datos PostgreSQL",
+      "Creación y consumo de APIs REST",
+      "Implementación de autenticación y seguridad",
+      "Importación masiva de datos desde Excel",
+      "Generación de reportes y dashboards",
+      "Despliegue y puesta en producción del sistema",
+      "Configuración básica de Docker y Linux",
+      "Optimización y mantenimiento del sistema",
+      "Control de versiones con Git y GitHub"
+    ],
+    type: "professional"
   }
 ];
-
-export const educationData = {
-  degree: "Ingeniería en Sistemas de Información",
-  institution: "UNAN-León",
-  period: "2021 - 2025",
-  technologies: ["Laravel", "React", "MySQL", "PostgreSQL", "Git", "Docker", "Linux"],
-  description: "Durante mi formación aprendí programación, bases de datos, desarrollo web, desarrollo móvil, redes, ingeniería de software, análisis de sistemas y buenas prácticas de desarrollo."
-};
