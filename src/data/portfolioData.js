@@ -95,7 +95,7 @@ export const navLinks = [
 export const categories = ["todos", "Full Stack", "Empresarial", "Android", "Frontend", "destacados"];
 
 export const contactInfo = [
-  { icon: "✉️", title: "Email", value: "josue.castillo@example.com", color: "#3B82F6", action: "mailto:josue.castillo@example.com" },
+  { icon: "✉️", title: "Email", value: "valverde44255@gmail.com", color: "#3B82F6", action: "mailto:valverde44255@gmail.com" },
   { icon: "💬", title: "WhatsApp", value: "+505 5824 9298", color: "#22C55E", action: "https://wa.me/50558249298" },
   { icon: "📍", title: "Ubicación", value: "León, Nicaragua", color: "#8B5CF6", action: null },
   { icon: "🐙", title: "GitHub", value: "/josuecastillo", color: "#fff", action: "https://github.com" },
@@ -113,3 +113,26 @@ export const statsData = [
   { label: "Experiencia", value: 3, suffix: "+ años" },
   { label: "Clientes", value: 12, suffix: "+" },
 ];
+
+export const experienceData = [
+  {
+    role: "Pasante en Yazaki Nicaragua",
+    period: "Septiembre 2025 - Enero 2026",
+    technologies: ["SAP", "Excel", "Soporte de sistemas", "Manejo de datos"],
+    description: "Aprendí procesos empresariales, uso de SAP, organización de información, soporte tecnológico y automatización básica de tareas."
+  },
+  {
+    role: "Pasante en UNAN-León",
+    period: "Febrero 2026 - Mayo 2026",
+    technologies: ["React", "Laravel", "PostgreSQL", "APIs REST", "Tailwind CSS", "GitHub"],
+    description: "Trabajé en el proyecto Directorio de Vinculación, aprendiendo desarrollo full stack, manejo de base de datos, autenticación, reportes, importación de Excel y buenas prácticas de desarrollo."
+  }
+];
+
+export const educationData = {
+  degree: "Ingeniería en Sistemas de Información",
+  institution: "UNAN-León",
+  period: "2021 - 2025",
+  technologies: ["Laravel", "React", "MySQL", "PostgreSQL", "Git", "Docker", "Linux"],
+  description: "Durante mi formación aprendí programación, bases de datos, desarrollo web, desarrollo móvil, redes, ingeniería de software, análisis de sistemas y buenas prácticas de desarrollo."
+};

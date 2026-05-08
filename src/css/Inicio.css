@@ -864,6 +864,225 @@
   transform: translateY(-2px);
 }
 
+/* ========== EXPERIENCIA SECTION ========== */
+.experience-section {
+  padding: 100px 5%;
+  background: rgba(16,185,129,0.04);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.experience-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.experience-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(16,185,129,0.28);
+  color: #34D399;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.experience-title {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.experience-title span {
+  background: linear-gradient(135deg, #10B981, #34D399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.18);
+  border-radius: 28px;
+  padding: 36px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #10B981;
+  flex: 1 1 360px;
+  max-width: 480px;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(16,185,129,0.5);
+  border-left-color: #34D399;
+  box-shadow: 0 32px 110px rgba(0,0,0,0.22);
+}
+
+.experience-role {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+.experience-period {
+  font-size: 14px;
+  color: #34D399;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.experience-tech-tag {
+  font-size: 12px;
+  color: #D8FBDD;
+  background: rgba(16,185,129,0.14);
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.experience-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+}
+
+/* ========== FORMACIÓN SECTION ========== */
+.education-section {
+  padding: 100px 5%;
+  background: rgba(139,92,246,0.03);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.education-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.education-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(139,92,246,0.28);
+  color: #A78BFA;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.education-title {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.education-title span {
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.education-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.18);
+  border-radius: 28px;
+  padding: 38px;
+  max-width: 840px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  display: grid;
+  gap: 18px;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139,92,246,0.45);
+  box-shadow: 0 32px 110px rgba(0,0,0,0.22);
+}
+
+.education-degree {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 0;
+  letter-spacing: -0.3px;
+}
+
+.education-institution {
+  font-size: 18px;
+  color: #A78BFA;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.education-period {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  white-space: nowrap;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 14px;
+}
+
+.education-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.education-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.education-tech-tag {
+  font-size: 13px;
+  color: #E9D7FE;
+  background: rgba(167,139,250,0.18);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
 /* ========== FOOTER ========== */
 .footer {
   border-top: 1px solid rgba(255,255,255,0.06);

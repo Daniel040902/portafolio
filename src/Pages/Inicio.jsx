@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import useCounter from "../hooks/useCounter";
 import AnimSection from "../components/AnimSection";
 import SkillBar from "../components/SkillBar";
@@ -13,6 +13,8 @@ import {
   contactInfo,
   socialLinks,
   statsData,
+  experienceData,
+  educationData,
 } from "../data/portfolioData";
 
 export default function Portfolio() {
@@ -23,8 +25,6 @@ export default function Portfolio() {
   const [showContactForm, setShowContactForm] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   
-  const statsRef = useRef(null);
-  const statsInView = useCounter(1, 1);
   const projectCount = useCounter(statsData[0].value, 1500);
   const techCount = useCounter(statsData[1].value, 1500);
   const experienceYears = useCounter(statsData[2].value, 1500);
@@ -136,15 +136,10 @@ export default function Portfolio() {
             <h1 className="hero-title">
               Desarrollador{" "}
               <span>Full Stack</span>
-              <br />
-              <span className="hero-subtitle">
-                y Creativo Digital
-              </span>
             </h1>
 
             <p className="hero-description">
-              Transformo ideas en experiencias digitales excepcionales.
-              Especializado en <strong>React</strong>, <strong>Laravel</strong> y tecnologías modernas.
+              Desarrollo soluciones web y móviles modernas, escalables y eficientes utilizando <strong>React</strong>, <strong>Laravel</strong>, <strong>Node.js</strong> y bases de datos.
             </p>
 
             <div className="social-links">
@@ -180,13 +175,14 @@ export default function Portfolio() {
               <div className="hero-image-wrapper">
                 <div className="hero-image-inner">
                   <img
-                    src="/daniel.png"
-                    alt="Josue Castillo"
-                    className="hero-image"
-                    onError={(e) => {
-                      e.target.src = "https://ui-avatars.com/api/?name=Josue+Castillo&background=3B82F6&color=fff&size=380";
-                    }}
-                  />
+  src={`${import.meta.env.BASE_URL}daniel.png`}
+  alt="Josue Castillo"
+  className="hero-image"
+  onError={(e) => {
+    e.target.src =
+      "https://ui-avatars.com/api/?name=Josue+Castillo&background=3B82F6&color=fff&size=380";
+  }}
+/>
                 </div>
               </div>
 
@@ -285,6 +281,73 @@ export default function Portfolio() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ========== EXPERIENCIA SECTION ========== */}
+      <section id="experiencia" className="experience-section">
+        <div className="experience-container">
+          <AnimSection className="experience-header">
+            <div className="experience-badge">
+              EXPERIENCIA
+            </div>
+            <h2 className="experience-title">
+              Experiencia{" "}
+              <span>
+                Profesional
+              </span>
+            </h2>
+          </AnimSection>
+
+          <div className="experience-grid">
+            {experienceData.map((exp, idx) => (
+              <AnimSection key={exp.role} delay={idx * 100}>
+                <div className="experience-card">
+                  <h3 className="experience-role">{exp.role}</h3>
+                  <div className="experience-period">{exp.period}</div>
+                  <div className="experience-tech">
+                    {exp.technologies.map(tech => (
+                      <span key={tech} className="experience-tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                  <p className="experience-desc">{exp.description}</p>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== FORMACIÓN SECTION ========== */}
+      <section id="formacion" className="education-section">
+        <div className="education-container">
+          <AnimSection className="education-header">
+            <div className="education-badge">
+              FORMACIÓN
+            </div>
+            <h2 className="education-title">
+              Formación{" "}
+              <span>
+                Académica
+              </span>
+            </h2>
+          </AnimSection>
+
+          <AnimSection delay={100}>
+            <div className="education-card">
+              <div className="education-meta">
+                <span className="education-degree">{educationData.degree}</span>
+                <span className="education-institution">{educationData.institution}</span>
+                <span className="education-period">{educationData.period}</span>
+              </div>
+              <p className="education-desc">{educationData.description}</p>
+              <div className="education-tech">
+                {educationData.technologies.map(tech => (
+                  <span key={tech} className="education-tech-tag">{tech}</span>
+                ))}
+              </div>
+            </div>
+          </AnimSection>
         </div>
       </section>
 
