@@ -1,3 +1,20 @@
+/**
+ * ============================================
+ *  PORTFOLIO DATA - Josue Castillo
+ *  Datos estáticos del portafolio personal
+ * ============================================
+ */
+import directorioImg from "../assets/images/proyectos/directorio-vinculacion/Sistemade vinculacion.jpeg";
+
+/**
+ * Habilidades técnicas con nivel de dominio.
+ * @property {string}  name     - Nombre de la tecnología
+ * @property {number}  level    - Porcentaje de dominio (0-100)
+ * @property {string}  color    - Color hexadecimal principal
+ * @property {string}  bg       - Color hexadecimal de fondo
+ * @property {string}  icon     - Emoji representativo
+ * @property {string}  years    - Años de experiencia
+ */
 export const skills = [
   { name: "React", level: 92, color: "#61DAFB", bg: "#0d1f2d", icon: "⚛️", years: "3+ años" },
   { name: "Laravel", level: 88, color: "#FF2D20", bg: "#1f0d0d", icon: "🔷", years: "2+ años" },
@@ -10,12 +27,23 @@ export const skills = [
   { name: "Docker", level: 72, color: "#2496ED", bg: "#0d1520", icon: "🐳", years: "1+ año" },
 ];
 
+/**
+ * Proyectos realizados.
+ * @property {string}  title     - Nombre del proyecto
+ * @property {string}  category  - Categoría (Full Stack, Empresarial, Android, Frontend)
+ * @property {string}  desc      - Descripción breve
+ * @property {string}  img       - URL de la imagen del proyecto
+ * @property {string[]} tech     - Tecnologías utilizadas
+ * @property {boolean} highlight - Si es un proyecto destacado
+ * @property {string}  year      - Año de realización
+ * @property {string[]} features - Características principales
+ */
 export const projects = [
   {
     title: "Directorio de Vinculación",
     category: "Full Stack",
     desc: "Sistema web para registrar, buscar, editar e importar información académica y laboral con reportes avanzados.",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    img: directorioImg,
     tech: ["React", "Laravel", "PostgreSQL"],
     highlight: true,
     year: "2024",
@@ -51,49 +79,84 @@ export const projects = [
     year: "2023",
     features: ["Actualización automática", "Filtros avanzados", "Optimizado móvil", "Sin backend"]
   },
+  {
+    title: "Sistema de Facturación - Bordados y Sublimación",
+    category: "Empresarial",
+    desc: "Sistema de facturación personalizada con contabilidad integrada, cierre de caja, roles de usuario, gestión de pedidos y facturación electrónica para negocio de bordados y sublimación.",
+    img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop",
+    tech: ["React", "Laravel", "MySQL", "Tailwind CSS"],
+    highlight: true,
+    year: "2025",
+    features: ["Facturación personalizada", "Contabilidad integrada", "Cierre de caja", "Roles y permisos", "Gestión de pedidos", "Control de inventario"]
+  },
 ];
 
+/**
+ * Servicios ofrecidos.
+ * @property {string}   icon     - Emoji representativo
+ * @property {string}   title    - Título del servicio
+ * @property {string}   desc     - Descripción del servicio
+ * @property {string}   accent   - Color de acento hexadecimal
+ * @property {string[]} features - Características del servicio
+ */
 export const services = [
-  { 
-    icon: "⚛️", 
-    title: "Full Stack Web", 
+  {
+    icon: "⚛️",
+    title: "Full Stack Web",
     desc: "Aplicaciones web modernas y escalables con React, Laravel y bases de datos robustas.",
     accent: "#93C5FD",
     features: ["Rendimiento optimizado", "SEO avanzado", "PWA ready", "Seguridad implementada"]
   },
-  { 
-    icon: "🗄️", 
-    title: "Bases de Datos", 
+  {
+    icon: "🗄️",
+    title: "Bases de Datos",
     desc: "Diseño, optimización y gestión de MySQL y PostgreSQL para máximo rendimiento.",
     accent: "#8B5CF6",
     features: ["Normalización", "Optimización queries", "Backup automático", "Alta disponibilidad"]
   },
-  { 
-    icon: "🔌", 
-    title: "APIs & Servicios", 
+  {
+    icon: "🔌",
+    title: "APIs & Servicios",
     desc: "APIs REST seguras con autenticación JWT y documentación completa con Swagger.",
     accent: "#10B981",
     features: ["RESTful design", "Autenticación", "Rate limiting", "Documentación OpenAPI"]
   },
-  { 
-    icon: "📱", 
-    title: "Apps Móviles", 
+  {
+    icon: "📱",
+    title: "Apps Móviles",
     desc: "Aplicaciones Android nativas con Kotlin y SQLite con experiencia de usuario premium.",
     accent: "#F59E0B",
     features: ["UI/UX moderna", "Offline first", "Push notifications", "Play Store deploy"]
   },
 ];
 
+/**
+ * Enlaces de navegación del menú principal.
+ * @property {string} id    - Identificador para scroll y active state
+ * @property {string} label - Texto visible del enlace
+ * @property {string} icon  - Emoji del icono
+ */
 export const navLinks = [
-  { id: "inicio", label: "Inicio", icon: "🏠" },
+  { id: "portafolio", label: "Portafolio", icon: "🏠" },
   { id: "sobre", label: "Sobre mí", icon: "👤" },
   { id: "habilidades", label: "Skills", icon: "⚡" },
   { id: "proyectos", label: "Proyectos", icon: "📁" },
   { id: "contacto", label: "Contacto", icon: "📧" },
 ];
 
+/**
+ * Categorías para filtrar proyectos.
+ */
 export const categories = ["todos", "Full Stack", "Empresarial", "Android", "Frontend", "destacados"];
 
+/**
+ * Información de contacto.
+ * @property {string}      icon   - Emoji del icono
+ * @property {string}      title  - Tipo de contacto
+ * @property {string}      value  - Valor/dato de contacto
+ * @property {string}      color  - Color de acento hexadecimal
+ * @property {string|null} action - Enlace de acción (mailto, https, null)
+ */
 export const contactInfo = [
   { icon: "✉️", title: "Email", value: "valverde44255@gmail.com", color: "#93C5FD", action: "mailto:valverde44255@gmail.com" },
   { icon: "💬", title: "WhatsApp", value: "+505 5824 9298", color: "#22C55E", action: "https://wa.me/50558249298" },
@@ -101,19 +164,43 @@ export const contactInfo = [
   { icon: "🐙", title: "GitHub", value: "/josuecastillo", color: "#fff", action: "https://github.com" },
 ];
 
+/**
+ * Redes sociales del perfil.
+ * @property {string} label - Nombre de la red
+ * @property {string} href  - URL del perfil
+ * @property {string} icon  - Emoji del icono
+ * @property {string} color - Color de la marca
+ */
 export const socialLinks = [
   { label: "GitHub", href: "https://github.com", icon: "🐙", color: "#fff" },
   { label: "LinkedIn", href: "https://linkedin.com", icon: "💼", color: "#0A66C2" },
   { label: "WhatsApp", href: "https://wa.me/50558249298", icon: "💬", color: "#25D366" },
 ];
 
+/**
+ * Estadísticas personales (valores de contador animado).
+ * @property {string} label  - Nombre de la estadística
+ * @property {number} value  - Valor numérico
+ * @property {string} suffix - Sufijo del valor (+, años)
+ */
 export const statsData = [
-  { label: "Proyectos", value: 4, suffix: "+" },
+  { label: "Proyectos", value: 5, suffix: "+" },
   { label: "Tecnologías", value: 9, suffix: "+" },
   { label: "Experiencia", value: 3, suffix: "+ años" },
   { label: "Clientes", value: 12, suffix: "+" },
 ];
 
+/**
+ * Datos de formación académica y trayectoria profesional.
+ * @property {string}   icon         - Emoji representativo
+ * @property {string}   title        - Título o puesto
+ * @property {string}   subtitle     - Institución o empresa
+ * @property {string}   period       - Período de tiempo
+ * @property {string[]} technologies - Tecnologías o herramientas asociadas
+ * @property {string}   description  - Descripción detallada
+ * @property {string[]} highlights   - Logros destacados (solo profesional)
+ * @property {string}   type         - "academic" | "professional"
+ */
 export const trainingData = [
   {
     icon: "🎓",
@@ -151,6 +238,27 @@ export const trainingData = [
       "Configuración básica de Docker y Linux",
       "Optimización y mantenimiento del sistema",
       "Control de versiones con Git y GitHub"
+    ],
+    type: "professional"
+  },
+  {
+    icon: "🧾",
+    title: "Full Stack Developer - Sistema de Facturación",
+    subtitle: "Bordados y Sublimación",
+    period: "2025",
+    technologies: ["React", "Laravel", "PostgreSQL", "Tailwind CSS", "JavaScript", "Git & GitHub"],
+    description: "Desarrollé un sistema de facturación personalizada completo para un negocio de bordados y sublimación. El sistema incluye contabilidad integrada, cierre de caja automático, roles de usuario (admin, vendedor, cliente), gestión de pedidos, facturación electrónica y control de inventario. Fue implementado como una solución integral para reemplazar procesos manuales y mejorar la eficiencia operativa del negocio.",
+    highlights: [
+      "Facturación personalizada con diseños propios",
+      "Módulo de contabilidad con libro diario y mayor",
+      "Cierre de caja automático con reportes diarios",
+      "Sistema de roles y permisos (admin, vendedor, cliente)",
+      "Gestión de pedidos con seguimiento de estado",
+      "Facturación electrónica y tickets de venta",
+      "Control de inventario en tiempo real",
+      "Dashboard con indicadores financieros",
+      "Exportación de reportes a PDF y Excel",
+      "Despliegue en producción y capacitación al usuario"
     ],
     type: "professional"
   }

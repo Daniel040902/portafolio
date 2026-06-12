@@ -1,16 +1,73 @@
-# React + Vite
+# Josue Castillo | Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio web personal de **Josue Castillo**, desarrollador Full Stack. Una aplicación moderna construida con React, Vite y Tailwind CSS, desplegada en GitHub Pages.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** — UI declarativa y componentes reutilizables
+- **Vite 7** — Build tool ultrarrápido
+- **Tailwind CSS 4** — Estilos utility-first
+- **React Router DOM** — Enrutamiento SPA
+- **Intersection Observer API** — Animaciones al hacer scroll
+- **GitHub Pages** — Despliegue continuo
 
-## React Compiler
+## ✨ Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Diseño oscuro moderno con gradientes animados
+- Animaciones de entrada por scroll
+- Contador animado de estadísticas
+- Filtro de proyectos por categoría
+- Formulario de contacto directo vía WhatsApp
+- Totalmente responsive
+- Scrollbar personalizada
 
-## Expanding the ESLint configuration
+## 📦 Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/Daniel040902/portafolio.git
+cd portafolio
+npm install
+```
+
+## 🛠️ Desarrollo
+
+```bash
+npm run dev
+```
+
+Abre [http://localhost:5173](http://localhost:5173) en el navegador.
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+Genera los archivos estáticos en la carpeta `dist/`.
+
+## 🚢 Deploy
+
+```bash
+npm run deploy
+```
+
+Publica la carpeta `dist/` en GitHub Pages.
+
+## 📁 Estructura
+
+```
+src/
+├── Pages/         # Página principal (Portafolio)
+├── components/    # Componentes reutilizables
+├── css/           # Estilos CSS organizados por sección
+├── data/          # Datos estáticos del portafolio
+├── hooks/         # Hooks personalizados (useCounter, useInView)
+├── routers/       # Configuración de rutas
+├── App.jsx        # Componente raíz
+├── index.css      # Estilos globales + Tailwind
+└── main.jsx       # Punto de entrada
+```
+
+## 📄 Licencia
+
+MIT

@@ -1,5 +1,18 @@
+/**
+ * ============================================
+ *  INDEX.CSS - Estilos globales
+ *  Tailwind CSS + Animaciones personalizadas
+ * ============================================
+ */
+
+/* Importar Tailwind CSS v4 */
 @import "tailwindcss";
 
+/* ========================================== */
+/*  ANIMACIONES GLOBALES                      */
+/* ========================================== */
+
+/* Fade-in con desplazamiento para componentes */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -11,27 +24,34 @@
   }
 }
 
+/* Pulso para indicadores de estado */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
 
+/* Flotación para elementos decorativos */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
 
+/* Gradiente animado para fondos */
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* ========================================== */
+/*  SCROLLBAR PERSONALIZADO                   */
+/* ========================================== */
 * {
   scrollbar-width: thin;
   scrollbar-color: #93C5FD #1F1F2E;
 }
 
+/* Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 8px;
 }

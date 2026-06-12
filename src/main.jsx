@@ -1,3 +1,14 @@
+/**
+ * ============================================
+ *  MAIN - Punto de entrada de la aplicación
+ * ============================================
+ *  Renderiza la aplicación React con:
+ *  - BrowserRouter para enrutamiento
+ *  - Tailwind CSS + estilos personalizados
+ *  - Basename configurado para GitHub Pages (/portafolio)
+ * ============================================
+ */
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";

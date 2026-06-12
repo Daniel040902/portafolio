@@ -1,30 +1,65 @@
+/**
+ * ============================================
+ *  PORTAFOLIO.CSS - Estilos principales
+ *  Josue Castillo | Full Stack Developer
+ * ============================================
+ *
+ *  ÍNDICE:
+ *  1. IMPORTS Y RESET
+ *  2. ANIMACIONES GLOBALES (gradient, float, pulse)
+ *  3. LAYOUT PRINCIPAL (.portfolio)
+ *  4. HEADER / NAVBAR
+ *  5. HERO / PORTAFOLIO
+ *  6. SOBRE MÍ / SERVICIOS
+ *  7. HABILIDADES TÉCNICAS
+ *  8. FORMACIÓN Y TRAYECTORIA
+ *  9. PROYECTOS
+ *  10. CONTACTO
+ *  11. FOOTER
+ * ============================================
+ */
+
+/* ========================================== */
+/*  1. IMPORTS                                */
+/* ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
 
-.portfolio {
-  font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
-  background: #0A0A0F;
-  color: #FFFFFF;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+/* ========================================== */
+/*  2. ANIMACIONES GLOBALES                   */
+/* ========================================== */
 
-/* ========== ANIMATIONS ========== */
+/* Gradiente animado para fondos y textos */
 @keyframes gradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
+/* Flotación suave para elementos decorativos */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
 
+/* Pulso para indicadores de estado (disponible, dot) */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
 
-/* ========== HEADER ========== */
+/* ========================================== */
+/*  3. LAYOUT PRINCIPAL                       */
+/* ========================================== */
+.portfolio {
+  font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: #24243A;
+  color: #FFFFFF;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========================================== */
+/*  4. HEADER / NAVBAR                        */
+/* ========================================== */
 .header {
   position: fixed;
   top: 0;
@@ -38,9 +73,10 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Estado del header cuando el usuario ha hecho scroll */
 .header.scrolled {
   padding: 16px 5%;
-  background: rgba(10,10,15,0.95);
+  background: rgba(36,36,58,0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -53,6 +89,7 @@
   justify-content: space-between;
 }
 
+/* Logo y nombre */
 .logo-button {
   background: none;
   border: none;
@@ -94,6 +131,7 @@
   letter-spacing: 0.5px;
 }
 
+/* Navegación */
 .nav {
   display: flex;
   gap: 8px;
@@ -128,6 +166,7 @@
   color: #fff;
 }
 
+/* Botón CV (no usado actualmente en el header) */
 .cv-button {
   background: linear-gradient(135deg, #93C5FD, #6366F1);
   color: #fff;
@@ -148,7 +187,9 @@
   box-shadow: 0 8px 25px rgba(59,130,246,0.4);
 }
 
-/* ========== HERO SECTION ========== */
+/* ========================================== */
+/*  5. HERO / PORTAFOLIO                      */
+/* ========================================== */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -158,6 +199,7 @@
   padding: 120px 5% 80px;
 }
 
+/* Fondos decorativos del hero */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -209,6 +251,7 @@
   z-index: 2;
 }
 
+/* Badge de disponibilidad */
 .status-badge {
   display: inline-flex;
   align-items: center;
@@ -236,6 +279,7 @@
   letter-spacing: 0.5px;
 }
 
+/* Título principal */
 .hero-title {
   font-size: clamp(48px, 6vw, 80px);
   font-weight: 900;
@@ -258,6 +302,7 @@
   color: rgba(255,255,255,0.5);
 }
 
+/* Descripción */
 .hero-description {
   font-size: 18px;
   line-height: 1.7;
@@ -270,6 +315,7 @@
   color: #93C5FD;
 }
 
+/* Redes sociales */
 .social-links {
   display: flex;
   gap: 16px;
@@ -297,6 +343,7 @@
   transform: translateY(-2px);
 }
 
+/* Estadísticas */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -322,6 +369,7 @@
   margin-top: 4px;
 }
 
+/* Imagen de perfil */
 .hero-image-container {
   position: relative;
   display: flex;
@@ -350,7 +398,7 @@
 }
 
 .hero-image-inner {
-  background: #0A0A0F;
+  background: #24243A;
   padding: 6px;
   border-radius: 50%;
 }
@@ -362,6 +410,7 @@
   object-fit: cover;
 }
 
+/* Badges flotantes decorativos */
 .hero-badge1 {
   position: absolute;
   top: 20px;
@@ -411,7 +460,9 @@
   font-weight: 600;
 }
 
-/* ========== SOBRE MÍ SECTION ========== */
+/* ========================================== */
+/*  6. SOBRE MÍ / SERVICIOS                   */
+/* ========================================== */
 .about-section {
   padding: 100px 5%;
   background: linear-gradient(180deg, rgba(59,130,246,0.02) 0%, transparent 100%);
@@ -462,6 +513,7 @@
   line-height: 1.6;
 }
 
+/* Grid de tarjetas de servicio */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -469,17 +521,19 @@
 }
 
 .service-card {
+  --accent: #93C5FD;
   background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 24px;
   padding: 32px;
   transition: all 0.3s ease;
   height: 100%;
+  transform: translateY(0);
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(59,130,246,0.4);
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
 .service-icon {
@@ -523,7 +577,9 @@
   border-radius: 12px;
 }
 
-/* ========== HABILIDADES SECTION ========== */
+/* ========================================== */
+/*  7. HABILIDADES TÉCNICAS                   */
+/* ========================================== */
 .skills-section {
   padding: 100px 5%;
 }
@@ -568,303 +624,9 @@
   gap: 20px;
 }
 
-/* ========== PROYECTOS SECTION ========== */
-.projects-section {
-  padding: 100px 5%;
-  background: linear-gradient(180deg, transparent 0%, rgba(59,130,246,0.02) 100%);
-}
-
-.projects-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.projects-header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.projects-badge {
-  display: inline-block;
-  padding: 6px 20px;
-  border-radius: 100px;
-  border: 1px solid rgba(6,182,212,0.3);
-  color: #22D3EE;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin-bottom: 24px;
-}
-
-.projects-title {
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 800;
-  letter-spacing: -1.5px;
-  margin-bottom: 16px;
-}
-
-.projects-title span {
-  background: linear-gradient(135deg, #06B6D4, #93C5FD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.projects-description {
-  font-size: 18px;
-  color: rgba(255,255,255,0.6);
-}
-
-.filter-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
-}
-
-.filter-button {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 10px 24px;
-  border-radius: 40px;
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255,255,255,0.6);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: capitalize;
-}
-
-.filter-button.active {
-  background: linear-gradient(135deg, #93C5FD, #6366F1);
-  border: none;
-  color: #fff;
-}
-
-.filter-button:hover:not(.active) {
-  background: rgba(255,255,255,0.1);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 32px;
-}
-
-/* ========== CONTACTO SECTION ========== */
-.contact-section {
-  padding: 100px 5% 80px;
-  position: relative;
-}
-
-.contact-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.contact-bg-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
-}
-
-.contact-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.contact-header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-
-.contact-badge {
-  display: inline-block;
-  padding: 6px 20px;
-  border-radius: 100px;
-  border: 1px solid rgba(99,102,241,0.3);
-  color: #818CF8;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin-bottom: 24px;
-}
-
-.contact-title {
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin-bottom: 20px;
-}
-
-.contact-title span {
-  background: linear-gradient(135deg, #6366F1, #8B5CF6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.contact-description {
-  font-size: 18px;
-  color: rgba(255,255,255,0.6);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-bottom: 60px;
-}
-
-.contact-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 24px;
-  padding: 36px 32px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-}
-
-.contact-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(99,102,241,0.4);
-}
-
-.contact-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: rgba(99,102,241,0.15);
-  border: 1px solid rgba(99,102,241,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  margin-bottom: 24px;
-}
-
-.contact-title-card {
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 8px;
-  color: #fff;
-}
-
-.contact-value {
-  font-size: 15px;
-  color: #818CF8;
-  font-weight: 500;
-}
-
-.contact-form-toggle {
-  text-align: center;
-}
-
-.contact-form-button {
-  background: linear-gradient(135deg, #93C5FD, #6366F1, #8B5CF6);
-  background-size: 200% 200%;
-  color: #fff;
-  border: none;
-  border-radius: 60px;
-  padding: 18px 48px;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(99,102,241,0.4);
-  animation: gradient 3s ease infinite;
-}
-
-.contact-form-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(99,102,241,0.5);
-}
-
-.contact-form {
-  margin-top: 48px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-form-container {
-  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 32px;
-  padding: 40px;
-}
-
-.contact-form-title {
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.contact-form-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-input {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 16px 20px;
-  font-size: 14px;
-  color: #fff;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.contact-input:focus {
-  border-color: #93C5FD;
-}
-
-.contact-textarea {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 16px 20px;
-  font-size: 14px;
-  color: #fff;
-  outline: none;
-  resize: vertical;
-  font-family: inherit;
-}
-
-.contact-textarea:focus {
-  border-color: #93C5FD;
-}
-
-.contact-submit {
-  background: linear-gradient(135deg, #22C55E, #16A34A);
-  color: #fff;
-  border: none;
-  border-radius: 16px;
-  padding: 16px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contact-submit:hover {
-  transform: translateY(-2px);
-}
-
-/* ========== FORMACIÓN Y TRAYECTORIA SECTION ========== */
+/* ========================================== */
+/*  8. FORMACIÓN Y TRAYECTORIA                */
+/* ========================================== */
 .training-section {
   padding: 100px 5%;
   background: linear-gradient(180deg, rgba(139,92,246,0.03) 0%, rgba(16,185,129,0.03) 100%);
@@ -909,13 +671,18 @@
 
 .training-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   align-items: stretch;
 }
 
+.training-grid > * {
+  height: 100%;
+}
+
+/* Tarjetas de formación */
 .training-card {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.14);
@@ -1017,6 +784,7 @@
   background: rgba(16,185,129,0.14);
 }
 
+/* Highlighs de experiencia profesional */
 .training-card-highlights {
   margin-bottom: 20px;
 }
@@ -1048,7 +816,331 @@
   color: #D8FBDD;
 }
 
-/* ========== FOOTER ========== */
+/* ========================================== */
+/*  9. PROYECTOS                              */
+/* ========================================== */
+.projects-section {
+  padding: 100px 5%;
+  background: linear-gradient(180deg, transparent 0%, rgba(59,130,246,0.02) 100%);
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.projects-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(6,182,212,0.3);
+  color: #22D3EE;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.projects-title {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+}
+
+.projects-title span {
+  background: linear-gradient(135deg, #06B6D4, #93C5FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-description {
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Filtros de proyectos */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.filter-button {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.filter-button.active {
+  background: linear-gradient(135deg, #93C5FD, #6366F1);
+  border: none;
+  color: #fff;
+}
+
+.filter-button:hover:not(.active) {
+  background: rgba(255,255,255,0.1);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.projects-grid > * {
+  height: 100%;
+}
+
+.projects-grid > *:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* ========================================== */
+/*  10. CONTACTO                              */
+/* ========================================== */
+.contact-section {
+  padding: 100px 5% 80px;
+  position: relative;
+}
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.contact-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(99,102,241,0.3);
+  color: #818CF8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.contact-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.contact-title span {
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-description {
+  font-size: 18px;
+  color: rgba(255,255,255,0.6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de contacto */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  --color: #818CF8;
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 36px 32px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transform: translateY(0);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--color) 25%, transparent);
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(99,102,241,0.15);
+  border: 1px solid rgba(99,102,241,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.contact-title-card {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.contact-value {
+  font-size: 15px;
+  color: #818CF8;
+  font-weight: 500;
+}
+
+/* Botón de formulario */
+.contact-form-toggle {
+  text-align: center;
+}
+
+.contact-form-button {
+  background: linear-gradient(135deg, #93C5FD, #6366F1, #8B5CF6);
+  background-size: 200% 200%;
+  color: #fff;
+  border: none;
+  border-radius: 60px;
+  padding: 18px 48px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.4);
+  animation: gradient 3s ease infinite;
+}
+
+.contact-form-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(99,102,241,0.5);
+}
+
+/* Contenedor externo del formulario */
+.contact-form-wrapper {
+  margin-top: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  margin-top: 48px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form-container {
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 32px;
+  padding: 40px;
+}
+
+.contact-form-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #93C5FD;
+}
+
+.contact-textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.contact-textarea:focus {
+  border-color: #93C5FD;
+}
+
+.contact-submit {
+  background: linear-gradient(135deg, #22C55E, #16A34A);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* ========================================== */
+/*  11. FOOTER                                */
+/* ========================================== */
 .footer {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 40px 5%;
