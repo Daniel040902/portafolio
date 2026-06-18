@@ -1,6 +1,12 @@
 import AnimSection from "../AnimSection";
 import { trainingData } from "../../data/portfolioData";
 
+/**
+ * TrainingSection - Sección de formación y trayectoria
+ *
+ * Muestra tarjetas con la formación académica y experiencia
+ * profesional, incluyendo tecnologías y logros destacados.
+ */
 export default function TrainingSection() {
   return (
     <section id="trayectoria" className="training-section">

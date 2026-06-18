@@ -59,6 +59,11 @@ Publica la carpeta `dist/` en GitHub Pages.
 src/
 ├── Pages/         # Página principal (Portafolio)
 ├── components/    # Componentes reutilizables
+│   ├── sections/  # Secciones completas (Hero, About, Skills, etc.)
+│   ├── AnimSection.jsx
+│   ├── ContactForm.jsx
+│   ├── ProjectCard.jsx
+│   └── SkillBar.jsx
 ├── css/           # Estilos CSS organizados por sección
 ├── data/          # Datos estáticos del portafolio
 ├── hooks/         # Hooks personalizados (useCounter, useInView)
@@ -68,6 +73,4 @@ src/
 └── main.jsx       # Punto de entrada
 ```
 
-## 📄 Licencia
 
-MIT

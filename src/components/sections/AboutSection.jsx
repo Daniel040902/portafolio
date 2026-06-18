@@ -1,18 +1,23 @@
 import AnimSection from "../AnimSection";
 import { services } from "../../data/portfolioData";
 
+/**
+ * AboutSection - Sección "Sobre mí"
+ *
+ * Muestra una breve descripción personal y una cuadrícula
+ * de servicios ofrecidos con sus características.
+ */
 export default function AboutSection() {
   return (
     <section id="sobre" className="about-section">
       <div className="about-container">
         <AnimSection className="about-header">
           <div className="about-badge">SOBRE MÍ</div>
-          <h2 className="about-title">
-            Apasionado por crear <span>soluciones innovadoras</span> que transforman negocios
-          </h2>
           <p className="about-description">
-            Con m&aacute;s de 3 a&ntilde;os de experiencia en desarrollo full stack, me especializo en
-            crear aplicaciones web y m&oacute;viles escalables, eficientes y con una experiencia de usuario excepcional.
+            Soy desarrollador Full Stack con conocimientos en React, Laravel, .NET, Node.js y PostgreSQL. Me enfoco en el desarrollo de aplicaciones web, APIs REST y sistemas empresariales.
+          </p>
+          <p className="about-description">
+            Actualmente contin&uacute;o fortaleciendo mis habilidades mediante proyectos personales y profesionales orientados a crear soluciones eficientes, escalables y de calidad.
           </p>
         </AnimSection>
         <div className="services-grid">
@@ -30,13 +35,6 @@ export default function AboutSection() {
                 </div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.desc}</p>
-                <div className="service-features">
-                  {service.features.map(f => (
-                    <span key={f} className="service-feature" style={{ color: service.accent, background: `${service.accent}10` }}>
-                      ✓ {f}
-                    </span>
-                  ))}
-                </div>
               </div>
             </AnimSection>
           ))}

@@ -47,11 +47,58 @@
 }
 
 /* ========================================== */
+/*  3. UTILITY CLASSES PREMIUM                */
+/* ========================================== */
+
+/* Gradiente animado utility para Tailwind */
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
+/* Texto con gradiente y shine animado (Full Stack) */
+.gradient-shine {
+  background: linear-gradient(90deg, #59B8FF, #A855F7, #E84CB8, #A855F7, #59B8FF);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shine 4s linear infinite;
+}
+
+/* Borde animado con glow neón alrededor de la foto */
+.animated-border-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-border-glow::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(#59B8FF, #A855F7, #E84CB8, #59B8FF, #A855F7, #E84CB8, #59B8FF);
+  animation: rotate-border 4s linear infinite;
+  z-index: -1;
+}
+
+.animated-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(#59B8FF, #A855F7, #E84CB8, #59B8FF, #A855F7, #E84CB8, #59B8FF);
+  animation: rotate-border 4s linear infinite;
+  z-index: -2;
+  filter: blur(15px);
+  opacity: 0.5;
+}
+
+/* ========================================== */
 /*  3. LAYOUT PRINCIPAL                       */
 /* ========================================== */
 .portfolio {
   font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
-  background: #24243A;
+  background: #1E1E3F;
   color: #FFFFFF;
   min-height: 100vh;
   overflow-x: hidden;
@@ -76,7 +123,7 @@
 /* Estado del header cuando el usuario ha hecho scroll */
 .header.scrolled {
   padding: 16px 5%;
-  background: rgba(36,36,58,0.95);
+  background: rgba(30,30,63,0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -356,17 +403,23 @@
 }
 
 .stat-value {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 900;
-  background: linear-gradient(135deg, #93C5FD, #A78BFA);
+  background: linear-gradient(135deg, #59B8FF, #A855F7);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-align: center;
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 13px;
-  color: rgba(255,255,255,0.4);
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
   margin-top: 4px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* Imagen de perfil */
@@ -398,7 +451,7 @@
 }
 
 .hero-image-inner {
-  background: #24243A;
+  background: #1E1E3F;
   padding: 6px;
   border-radius: 50%;
 }

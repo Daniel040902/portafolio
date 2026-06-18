@@ -11,6 +11,13 @@ import FooterSection from "../components/sections/FooterSection";
 import { statsData } from "../data/portfolioData";
 import "../css/Portafolio.css";
 
+/**
+ * Portfolio - Página principal del portafolio
+ *
+ * Componente raíz que orquesta todas las secciones:
+ * Navbar, Hero, About, Skills, Training, Projects, Contact y Footer.
+ * Maneja el estado global de navegación, scroll, filtros y formulario.
+ */
 export default function Portfolio() {
   const [activeNav, setActiveNav] = useState("portafolio");
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +29,6 @@ export default function Portfolio() {
   const projectCount = useCounter(statsData[0].value, 1500);
   const techCount = useCounter(statsData[1].value, 1500);
   const experienceYears = useCounter(statsData[2].value, 1500);
-  const clientsCount = useCounter(statsData[3].value, 1500);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +61,6 @@ export default function Portfolio() {
     { label: statsData[0].label, value: projectCount, suffix: statsData[0].suffix },
     { label: statsData[1].label, value: techCount, suffix: statsData[1].suffix },
     { label: statsData[2].label, value: experienceYears, suffix: statsData[2].suffix },
-    { label: statsData[3].label, value: clientsCount, suffix: statsData[3].suffix },
   ];
 
   return (

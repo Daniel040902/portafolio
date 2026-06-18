@@ -2,6 +2,15 @@ import AnimSection from "../AnimSection";
 import SkillBar from "../SkillBar";
 import { skills } from "../../data/portfolioData";
 
+/**
+ * SkillsSection - Sección de habilidades técnicas
+ *
+ * Renderiza una cuadrícula de tarjetas de tecnología
+ * (SkillBar) con efecto hover compartido.
+ *
+ * @param {string|null} hoveredSkill - Nombre de la skill en hover
+ * @param {Function}    onHover      - Setter del estado hoveredSkill
+ */
 export default function SkillsSection({ hoveredSkill, onHover }) {
   return (
     <section id="habilidades" className="skills-section">

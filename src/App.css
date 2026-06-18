@@ -1,3 +1,13 @@
+/**
+ * ============================================
+ *  APP.CSS - Estilos legacy de Vite
+ *  NOTA: Este archivo no se usa en el portafolio
+ *  actual. Se mantiene como referencia del
+ *  template inicial de Vite + React.
+ * ============================================
+ */
+
+/* Contador de ejemplo (template Vite) */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -17,6 +27,7 @@
   }
 }
 
+/* Hero del template Vite (no usado en portafolio) */
 .hero {
   position: relative;
 
@@ -56,6 +67,7 @@
   }
 }
 
+/* Layout central del template */
 #center {
   display: flex;
   flex-direction: column;
@@ -70,6 +82,7 @@
   }
 }
 
+/* Sección de pasos siguientes del template */
 #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
@@ -95,6 +108,7 @@
   }
 }
 
+/* Documentación (template Vite) */
 #docs {
   border-right: 1px solid var(--border);
 
@@ -104,6 +118,7 @@
   }
 }
 
+/* Lista de enlaces del template */
 #next-steps ul {
   list-style: none;
   padding: 0;
@@ -153,6 +168,7 @@
   }
 }
 
+/* Espaciador del template */
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
@@ -161,6 +177,7 @@
   }
 }
 
+/* Indicadores de gradiente del template */
 .ticks {
   position: relative;
   width: 100%;

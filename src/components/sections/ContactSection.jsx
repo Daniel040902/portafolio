@@ -2,6 +2,18 @@ import AnimSection from "../AnimSection";
 import ContactForm from "../ContactForm";
 import { contactInfo } from "../../data/portfolioData";
 
+/**
+ * ContactSection - Sección de contacto
+ *
+ * Muestra tarjetas con información de contacto (email, WhatsApp,
+ * ubicación, GitHub) y un botón para desplegar el formulario
+ * de mensaje directo vía WhatsApp.
+ *
+ * @param {boolean}  showContactForm     - Indica si el form está visible
+ * @param {Function} setShowContactForm  - Setter para mostrar/ocultar form
+ * @param {Object}   formData            - Datos del formulario
+ * @param {Function} setFormData         - Setter del estado formData
+ */
 export default function ContactSection({ showContactForm, setShowContactForm, formData, setFormData }) {
   return (
     <section id="contacto" className="contact-section">

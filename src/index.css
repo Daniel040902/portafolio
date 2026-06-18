@@ -43,6 +43,18 @@
   100% { background-position: 0% 50%; }
 }
 
+/* Text shine effect para "Full Stack" */
+@keyframes text-shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Rotación del borde animado de la foto */
+@keyframes rotate-border {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* ========================================== */
 /*  SCROLLBAR PERSONALIZADO                   */
 /* ========================================== */

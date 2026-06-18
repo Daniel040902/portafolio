@@ -4,7 +4,9 @@
  *  Datos estáticos del portafolio personal
  * ============================================
  */
-import directorioImg from "../assets/images/proyectos/directorio-vinculacion/Sistemade vinculacion.jpeg";
+
+import vinculacionImg from "../assets/images/proyectos/directorio-vinculacion/sistema-vinculacion.png";
+import bordafamilyImg from "../assets/images/proyectos/sistema-sublimacion/Bordafamily.png";
 
 /**
  * Habilidades técnicas con nivel de dominio.
@@ -21,10 +23,13 @@ export const skills = [
   { name: "Node.js", level: 85, color: "#68A063", bg: "#0d1a10", icon: "🟢", years: "2+ años" },
   { name: "MySQL", level: 87, color: "#4479A1", bg: "#0d1320", icon: "🐬", years: "3+ años" },
   { name: "PostgreSQL", level: 83, color: "#336791", bg: "#0d1520", icon: "🐘", years: "2+ años" },
-  { name: "Kotlin", level: 75, color: "#7F52FF", bg: "#160d20", icon: "📱", years: "1+ año" },
+  { name: "Kotlin", level: 75, color: "#7F52FF", bg: "#160d20", icon: "📱", years: "3+ años" },
+  { name: "Android Studio", level: 78, color: "#3DDC84", bg: "#0d1a10", icon: "🤖", years: "3+ años" },
   { name: "Tailwind CSS", level: 93, color: "#38BDF8", bg: "#0d1a20", icon: "🎨", years: "3+ años" },
   { name: "Git & GitHub", level: 90, color: "#F05032", bg: "#1f120d", icon: "📦", years: "3+ años" },
   { name: "Docker", level: 72, color: "#2496ED", bg: "#0d1520", icon: "🐳", years: "1+ año" },
+  { name: ".NET", level: 75, color: "#512BD4", bg: "#1a0d2d", icon: "🟣", years: "1+ año" },
+  { name: "Linux", level: 70, color: "#FCC624", bg: "#1a1a0d", icon: "🐧", years: "3+ años" },
 ];
 
 /**
@@ -43,51 +48,32 @@ export const projects = [
     title: "Directorio de Vinculación",
     category: "Full Stack",
     desc: "Sistema web para registrar, buscar, editar e importar información académica y laboral con reportes avanzados.",
-    img: directorioImg,
+    img: vinculacionImg,
+    url: "https://drive.google.com/drive/folders/1VrnWj3wGorsq1d912t92w37ZUMdUHDjf?usp=drive_link",
     tech: ["React", "Laravel", "PostgreSQL"],
     highlight: true,
-    year: "2024",
     features: ["CRUD completo", "Importación masiva", "Reportes PDF", "Dashboard analítico"]
   },
   {
     title: "Sistema de Sublimación",
     category: "Empresarial",
     desc: "Gestión completa de inventario, ventas, clientes, pedidos, proveedores y reportes financieros.",
-    img: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200&auto=format&fit=crop",
+    img: bordafamilyImg,
+    url: "https://github.com/Daniel040902/Bordafamily",
     tech: ["React", "Node.js", "MySQL"],
     highlight: false,
-    year: "2024",
     features: ["Inventario en tiempo real", "Múltiples usuarios", "Facturación", "Dashboard ejecutivo"]
   },
   {
-    title: "App Android Lista Compras",
-    category: "Android",
-    desc: "Aplicación móvil con CRUD completo, SQLite, menús desplegables y diseño moderno en Kotlin.",
-    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
-    tech: ["Kotlin", "SQLite", "Android"],
-    highlight: false,
-    year: "2023",
-    features: ["Modo offline", "Categorías personalizables", "Exportar listas", "Widgets"]
-  },
-  {
-    title: "Catálogo Google Sheets",
+    title: "Lista de Landing Pages",
     category: "Frontend",
-    desc: "Catálogo dinámico conectado a Google Sheets con Apps Script para actualización en tiempo real.",
+    desc: "Compilación de landing pages modernas y responsivas desarrolladas con React y Tailwind CSS.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-    tech: ["React", "Apps Script", "Tailwind"],
+    url: "https://github.com/Daniel040902/Catalogo-Bordafamily",
+    liveUrl: "https://borda-family.com/",
+    tech: ["React", "Tailwind"],
     highlight: false,
-    year: "2023",
-    features: ["Actualización automática", "Filtros avanzados", "Optimizado móvil", "Sin backend"]
-  },
-  {
-    title: "Sistema de Facturación - Bordados y Sublimación",
-    category: "Empresarial",
-    desc: "Sistema de facturación personalizada con contabilidad integrada, cierre de caja, roles de usuario, gestión de pedidos y facturación electrónica para negocio de bordados y sublimación.",
-    img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1200&auto=format&fit=crop",
-    tech: ["React", "Laravel", "MySQL", "Tailwind CSS"],
-    highlight: true,
-    year: "2025",
-    features: ["Facturación personalizada", "Contabilidad integrada", "Cierre de caja", "Roles y permisos", "Gestión de pedidos", "Control de inventario"]
+    features: ["Diseño responsivo", "Componentes reutilizables", "Rendimiento optimizado"]
   },
 ];
 
@@ -102,31 +88,31 @@ export const projects = [
 export const services = [
   {
     icon: "⚛️",
-    title: "Full Stack Web",
-    desc: "Aplicaciones web modernas y escalables con React, Laravel y bases de datos robustas.",
+    title: "Desarrollo Web",
+    desc: "React, Laravel, .NET y Node.js para crear aplicaciones modernas y escalables.",
     accent: "#93C5FD",
-    features: ["Rendimiento optimizado", "SEO avanzado", "PWA ready", "Seguridad implementada"]
+    features: []
   },
   {
     icon: "🗄️",
     title: "Bases de Datos",
-    desc: "Diseño, optimización y gestión de MySQL y PostgreSQL para máximo rendimiento.",
+    desc: "Diseño, optimización y administración de PostgreSQL y MySQL.",
     accent: "#8B5CF6",
-    features: ["Normalización", "Optimización queries", "Backup automático", "Alta disponibilidad"]
+    features: []
   },
   {
     icon: "🔌",
-    title: "APIs & Servicios",
-    desc: "APIs REST seguras con autenticación JWT y documentación completa con Swagger.",
+    title: "APIs REST",
+    desc: "Desarrollo e integración de servicios REST seguros y eficientes.",
     accent: "#10B981",
-    features: ["RESTful design", "Autenticación", "Rate limiting", "Documentación OpenAPI"]
+    features: []
   },
   {
-    icon: "📱",
-    title: "Apps Móviles",
-    desc: "Aplicaciones Android nativas con Kotlin y SQLite con experiencia de usuario premium.",
+    icon: "📚",
+    title: "Aprendizaje Continuo",
+    desc: "Capacitación constante en nuevas tecnologías y buenas prácticas de desarrollo.",
     accent: "#F59E0B",
-    features: ["UI/UX moderna", "Offline first", "Push notifications", "Play Store deploy"]
+    features: []
   },
 ];
 
@@ -184,10 +170,9 @@ export const socialLinks = [
  * @property {string} suffix - Sufijo del valor (+, años)
  */
 export const statsData = [
-  { label: "Proyectos", value: 5, suffix: "+" },
+  { label: "Proyectos", value: 3, suffix: "+" },
   { label: "Tecnologías", value: 9, suffix: "+" },
   { label: "Experiencia", value: 3, suffix: "+ años" },
-  { label: "Clientes", value: 12, suffix: "+" },
 ];
 
 /**
@@ -217,7 +202,7 @@ export const trainingData = [
     subtitle: "Yazaki Nicaragua",
     period: "Septiembre 2025 - Enero 2026",
     technologies: ["SAP", "Microsoft Excel", "Soporte técnico", "Gestión de datos", "Automatización de procesos"],
-    description: "Participé en procesos tecnológicos y administrativos dentro del entorno empresarial, brindando soporte técnico y trabajando con herramientas de gestión empresarial como SAP. Durante la pasantía fortalecí habilidades en manejo de información, automatización de procesos y organización de datos corporativos en un entorno empresarial real.",
+    description: "Participé en procesos tecnológicos y administrativos dentro del entorno empresarial, siendo analista de datos y trabajando con herramientas de gestión empresarial como SAP. Durante la pasantía fortalecí habilidades en manejo de información, automatización de procesos y organización de datos corporativos en un entorno empresarial real.",
     type: "professional"
   },
   {
@@ -242,23 +227,18 @@ export const trainingData = [
     type: "professional"
   },
   {
-    icon: "🧾",
-    title: "Full Stack Developer - Sistema de Facturación",
-    subtitle: "Bordados y Sublimación",
-    period: "2025",
-    technologies: ["React", "Laravel", "PostgreSQL", "Tailwind CSS", "JavaScript", "Git & GitHub"],
-    description: "Desarrollé un sistema de facturación personalizada completo para un negocio de bordados y sublimación. El sistema incluye contabilidad integrada, cierre de caja automático, roles de usuario (admin, vendedor, cliente), gestión de pedidos, facturación electrónica y control de inventario. Fue implementado como una solución integral para reemplazar procesos manuales y mejorar la eficiencia operativa del negocio.",
+    icon: "💻",
+    title: "Sistema de Facturación Borda Family",
+    subtitle: "Proyecto Independiente",
+    period: "Mayo 2026 - Junio 2026",
+    technologies: ["React", "PostgreSQL", "Node.js", "APIs REST", "Git & GitHub"],
+    description: "Desarrollé un sistema de facturación completo para la empresa Borda Family, implementando gestión de usuarios, roles, inventario y módulo de facturación. El sistema permite control de stock, generación de facturas, administración de clientes y reportes financieros básicos.",
     highlights: [
-      "Facturación personalizada con diseños propios",
-      "Módulo de contabilidad con libro diario y mayor",
-      "Cierre de caja automático con reportes diarios",
-      "Sistema de roles y permisos (admin, vendedor, cliente)",
-      "Gestión de pedidos con seguimiento de estado",
-      "Facturación electrónica y tickets de venta",
-      "Control de inventario en tiempo real",
-      "Dashboard con indicadores financieros",
-      "Exportación de reportes a PDF y Excel",
-      "Despliegue en producción y capacitación al usuario"
+      "Gestión de usuarios con roles y permisos",
+      "Control de inventario y stock",
+      "Módulo completo de facturación",
+      "Generación de reportes",
+      "Base de datos PostgreSQL optimizada"
     ],
     type: "professional"
   }

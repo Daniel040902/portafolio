@@ -1,3 +1,13 @@
+/**
+ * ContactForm - Formulario de contacto vía WhatsApp
+ *
+ * Captura nombre, email y mensaje del usuario y abre
+ * WhatsApp con el mensaje pre-llenado.
+ *
+ * @param {Object}   formData              - Datos del formulario
+ * @param {Function} setFormData           - Setter del estado formData
+ * @param {Function} setShowContactForm    - Setter para mostrar/ocultar el form
+ */
 export default function ContactForm({ formData, setFormData, setShowContactForm }) {
   const handleSubmit = () => {
     const message = `Hola Josue! Me llamo ${formData.name}.%0A%0A${formData.message}%0A%0AMi email: ${formData.email}`;

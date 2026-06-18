@@ -2,6 +2,15 @@ import AnimSection from "../AnimSection";
 import ProjectCard from "../ProjectCard";
 import { projects, categories } from "../../data/portfolioData";
 
+/**
+ * ProjectsSection - Sección de proyectos
+ *
+ * Muestra filtros por categoría y una cuadrícula de tarjetas
+ * de proyecto (ProjectCard) con animación de entrada.
+ *
+ * @param {string}   filterCategory   - Categoría seleccionada en el filtro
+ * @param {Function} setFilterCategory - Setter de la categoría de filtro
+ */
 export default function ProjectsSection({ filterCategory, setFilterCategory }) {
   const filteredProjects =
     filterCategory === "todos"

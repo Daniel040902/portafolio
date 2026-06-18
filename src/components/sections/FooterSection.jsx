@@ -1,5 +1,12 @@
 import { navLinks } from "../../data/portfolioData";
 
+/**
+ * FooterSection - Pie de página
+ *
+ * Muestra enlaces de navegación y el copyright.
+ *
+ * @param {Function} scrollTo - Función para scroll suave a una sección
+ */
 export default function FooterSection({ scrollTo }) {
   return (
     <footer className="footer">

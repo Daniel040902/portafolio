@@ -108,6 +108,63 @@ export default function ProjectCard({ project, index }) {
             {project.desc}
           </p>
 
+          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "20px" }}>
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  background: "linear-gradient(135deg, #93C5FD, #6366F1)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: "40px",
+                  padding: "10px 24px",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  width: "fit-content",
+                }}
+                onMouseEnter={e => e.target.style.transform = "translateY(-2px)"}
+                onMouseLeave={e => e.target.style.transform = "translateY(0)"}
+              >
+                Ver proyecto →
+              </a>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  background: "rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  color: "#fff",
+                  borderRadius: "40px",
+                  padding: "10px 24px",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  width: "fit-content",
+                }}
+                onMouseEnter={e => { e.target.style.background = "rgba(255,255,255,0.15)"; e.target.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { e.target.style.background = "rgba(255,255,255,0.08)"; e.target.style.transform = "translateY(0)"; }}
+              >
+                Ver página →
+              </a>
+            )}
+          </div>
+
           {/* Características */}
           <div style={{ marginBottom: "20px", marginTop: "auto" }}>
             <div style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", marginBottom: "8px", fontWeight: 600 }}>
